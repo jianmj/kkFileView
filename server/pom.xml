@@ -11,6 +11,10 @@
 
     <artifactId>kkFileView</artifactId>
 
+    <properties>
+        <native.linux.classifier>linux-x86_64</native.linux.classifier>
+    </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -212,7 +216,7 @@
             <groupId>org.bytedeco</groupId>
             <artifactId>opencv</artifactId>
             <version>${opencv.version}</version>
-            <classifier>linux-x86_64</classifier>
+            <classifier>${native.linux.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.bytedeco</groupId>
@@ -224,7 +228,7 @@
             <groupId>org.bytedeco</groupId>
             <artifactId>openblas</artifactId>
             <version>${openblas.version}</version>
-            <classifier>linux-x86_64</classifier>
+            <classifier>${native.linux.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.bytedeco</groupId>
@@ -236,7 +240,7 @@
             <groupId>org.bytedeco</groupId>
             <artifactId>ffmpeg</artifactId>
             <version>${ffmpeg.version}</version>
-            <classifier>linux-x86_64</classifier>
+            <classifier>${native.linux.classifier}</classifier>
         </dependency>
         <dependency>
             <groupId>org.bytedeco</groupId>
@@ -326,6 +330,24 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <profiles>
+        <!-- Select explicitly when packaging the ARM64 container. -->
+        <profile>
+            <id>docker-arm64</id>
+            <properties>
+                <native.linux.classifier>linux-arm64</native.linux.classifier>
+            </properties>
+            <dependencies>
+                <dependency>
+                    <groupId>org.bytedeco</groupId>
+                    <artifactId>javacpp</artifactId>
+                    <version>${bytedeco.version}</version>
+                    <classifier>linux-arm64</classifier>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
 
     <build>
         <resources>

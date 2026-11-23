@@ -1,5 +1,9 @@
 # kkFileView
 
+### ARM64 Docker images with GitHub Actions
+
+This fork includes a **Docker ARM64** workflow that builds and smoke-tests a Linux ARM64 image before publishing it to GHCR. See the [build instructions and ARM limitations](docker/ARM64-GITHUB.cn.md).
+
 ### Introduction
 
 Document online preview project solution, built using the popular Spring Boot framework for easy setup and deployment. This versatile open source project provides basic support for a wide range of document formats, including:

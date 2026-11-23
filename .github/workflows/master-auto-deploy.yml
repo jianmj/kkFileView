@@ -1,8 +1,6 @@
 name: Master Auto Deploy
 
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
     inputs:
       harden_actuator:

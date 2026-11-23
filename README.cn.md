@@ -1,4 +1,9 @@
 # kkFileView
+
+### GitHub 构建 ARM64 Docker 镜像
+
+本 fork 提供 **Docker ARM64** GitHub Actions 工作流，自动打包并发布到 GHCR。使用步骤、镜像拉取命令与 ARM 功能限制见 [ARM64 构建说明](docker/ARM64-GITHUB.cn.md)。
+
 文档在线预览项目解决方案，项目使用流行的spring boot搭建，易上手和部署。万能的文件预览开源项目，基本支持主流文档格式预览，如：
 1. 支持 doc, docx, xls, xlsx, xlsm, ppt, pptx, csv, tsv, dotm, xlt, xltm, dot, dotx,xlam, xla ,pages ,pptm 等 Office 办公文档
 2. 支持 wps, dps, et, ett, wpt 等国产 WPS Office 办公文档
