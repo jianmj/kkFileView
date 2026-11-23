@@ -1,0 +1,5 @@
+# The application image only needs the Maven Linux distribution.
+**
+!server/
+!server/target/
+!server/target/kkFileView-*.tar.gz
